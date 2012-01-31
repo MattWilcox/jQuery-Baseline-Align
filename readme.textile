@@ -22,6 +22,6 @@ This is my first jQuery plugin - I would appreciate more experienced authors hav
 
 h2. Demo
 
-You can see the plugin in action on my *unfinished* webpage: http://core.mattwilcox.net/styleguide.htm
+You can see the plugin in action on the *unfinished* plugin homepage: <a href="http://baselinealign.mattwilcox.net/">http://baselinealign.mattwilcox.net</a>
 
 Scroll down to the images, watch how the text wraps nicely. Resize your browser. Watch how it continues to wrap nicely. Try the same with your JS disabled :)
