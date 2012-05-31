@@ -1,5 +1,7 @@
 /*
-  JQUERY.BASELINEALIGN-1.0.JS
+  JQUERY.BASELINEALIGN-1.0.1.JS
+
+  1.0.1 fixes an issue and gives compatibility with box-sizing: border-box;
   
   This plugin operates on a given set of images, it:
     * detects the docuemnt baseline
@@ -51,7 +53,7 @@
 
             // shrink the image height to a whole pixel value to avoid rounding errors in the layout engine
             // NOTE, this introduces a very very slight difference in aspect ratio. You'll never see it.
-            var container_height = Math.ceil(container.height());
+            var container_height = Math.ceil(container.outerHeight());
             container.css("height",container_height);
 
             total_footprint = Math.floor(container.outerHeight(false));
@@ -68,7 +70,7 @@
           return; // stop processing this loop
         }
         if(this_img.parents(settings.container).length > 0) { /* apply margin to specified container box, if it exists */
-          this_img.parents(settings.container).css("margin-bottom",offset+"px"); 
+          this_img.parents(settings.container).css("margin-bottom",offset+"px");
           return;
         }
         /* apply margin to image itself */
@@ -107,6 +109,6 @@
       return methods.init.apply( this, arguments );
     } else {
       $.error( 'Method ' +  method + ' does not exist on jQuery.baselineAlign' );
-    }  
+    }
   };
 })( jQuery );
