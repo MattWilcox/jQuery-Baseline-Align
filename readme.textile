@@ -1,24 +1,30 @@
 h1. jQuery Baseline Align
 
-Is a small plugin that ensures images within your mark-up adapt their bottom margin to the document baseline. This allows the page to retain vertical rhythm even though image heights are not a multiple of the document baseline.
+Is a small plugin that ensures given elements within your mark-up adapt their bottom margin to the document baseline. This allows the page to retain vertical rhythm even though certain element's heights are not a clean multiple of the document baseline.
 
 The plugin also watches for browser resize events, so that fluid layouts are catered for and the plugin is re-run automatically after a rescale.
 
 h2. Usage
 
-Call the plugin on any images you want to be automatically adjusted as follows:
+Call the plugin on any element you want to be automatically adjusted as follows:
 
 $('img').baselineAlign();
 
-You may optionally specify a container element to add the margin to. This is useful if you've got things like a wrapping anchor or light-box div: you won't want the margin on the image itself in those cases, so specify the container to put the margin on:
+You can string together multiple elements as follows:
+
+$('h1,h2,h3,h4,h5,h6,.pullquote').baselineAlign();
+
+You may optionally specify a container element to add the margin to. This is useful if you've got things like a wrapping anchor or light-box div: you won't want the margin on the image itself in those cases, so you can specify a container element to put the margin on instead:
 
 $("img").baselineAlign({container:'.popup'});
 
-It will accept any selector that is compatible with jQuery's parents() function.
+The container parameter will accept any selector that is compatible with jQuery's parents() function.
 
 h2. Notes
 
 This is my first jQuery plugin - I would appreciate more experienced authors having a look through and educating me about anything I could have done better.
+
+I do intend to refactor the code when I get time.
 
 h2. Demo
 
